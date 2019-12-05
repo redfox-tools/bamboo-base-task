@@ -49,14 +49,14 @@ public class WrappedBuildLogger implements BuildLogger {
     @Override
     public String addBuildLogEntry(@NotNull LogEntry logEntry) {
         if (logEntry instanceof BuildOutputLogEntry) {
-            taskLog.append(logEntry.getLog());
+            taskLog.append(logEntry.getLog()).append("\n");
         }
         return buildLogger.addBuildLogEntry(logEntry);
     }
 
     @Override
     public String addBuildLogEntry(@NotNull String s) {
-        taskLog.append(s);
+        taskLog.append(s).append("\n");
         return buildLogger.addBuildLogEntry(s);
     }
 
@@ -69,20 +69,20 @@ public class WrappedBuildLogger implements BuildLogger {
     @Override
     public String addErrorLogEntry(@NotNull LogEntry logEntry) {
         if (logEntry instanceof ErrorLogEntry) {
-            taskErrorLog.append(logEntry.getLog());
+            taskErrorLog.append(logEntry.getLog()).append("\n");
         }
         return buildLogger.addErrorLogEntry(logEntry);
     }
 
     @Override
     public String addErrorLogEntry(String s) {
-        taskErrorLog.append(s);
+        taskErrorLog.append(s).append("\n");
         return buildLogger.addErrorLogEntry(s);
     }
 
     @Override
     public void addErrorLogEntry(String s, @Nullable Throwable throwable) {
-        taskErrorLog.append(s);
+        taskErrorLog.append(s).append("\n");
         buildLogger.addErrorLogEntry(s, throwable);
     }
 

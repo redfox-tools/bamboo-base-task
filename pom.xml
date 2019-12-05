@@ -6,7 +6,7 @@
 
     <groupId>tools.redfox.bamboo</groupId>
     <artifactId>bamboo-base-task</artifactId>
-    <version>1.2.4</version><!-- PACKAGE VERSION HERE -->
+    <version>1.2.5</version><!-- PACKAGE VERSION HERE -->
 
     <organization>
         <name>redfox tools</name>
